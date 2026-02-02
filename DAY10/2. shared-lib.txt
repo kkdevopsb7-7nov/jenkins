@@ -88,7 +88,7 @@ pipeline {
     agent any
 
     tools {
-        maven "maven-3.9.9"
+        maven "maven-3.9.6"
     }
 
     stages {
@@ -127,7 +127,7 @@ pipeline {
                 sh """
                     curl -u kk:password \\
                     --upload-file target/maven-web-application.war \\
-                    "http://3.109.2.100:9090/manager/text/deploy?path=/maven-web-application&update=true"
+                    "http://3.109.2.100:8080/manager/text/deploy?path=/maven-web-application&update=true"
                 """
             }
         }
@@ -161,7 +161,7 @@ pipeline {
     agent any
 
     tools {
-        maven "maven-3.9.9"
+        maven "maven-3.9.6"
     }
 
     stages {
@@ -200,7 +200,7 @@ pipeline {
                 sh """
                     curl -u kk:password \\
                     --upload-file target/maven-web-application.war \\
-                    "http://3.109.2.100:9090/manager/text/deploy?path=/maven-web-application&update=true"
+                    "http://3.109.2.100:8080/manager/text/deploy?path=/maven-web-application&update=true"
                 """
             }
         }
